@@ -25,29 +25,16 @@
             Host Number <input type="number" name=" host_quan" id=" hn1">   Array Number<input type="number" name=" array_quan" id="an1"> 
             <br>
 
-            Is it fabric ?   <input type="radio" id="demo1" onclick="extendMenu()"> Yes</input> <input type="radio"  id="demo2">No</input> 
-           
-           <script> 
-               function extendMenu() {
-                   //var isfabric = document.getElementById("demo1").toString;
-                  // 
-                   var input1 = document.createElement('input1');
-                   var input2 = document.createElement('input2');
-                   input1.type = "radio";         
-                   input1.id = "Zone1";                 
-                    input1.onclick = "extendMenu()";
-                    input1.textContent = "Yes";
-                    document.writeln("Zone / VLAN  " + input1 + " Yes" +"  " + input2 + " No" + "<br>");
-                  
-                    //input1.
-                    //take idea and store data to jquery or C# then ask questions
-                    //var first =  "Zone/VLAN <input type=""radio"" name=""host_quan""> Yes <input type=""radio"" name=""host_quan""> No ";
-                    //var second =  " Zone/VLAN Template <input type=""radio"" name=""host_quan""> Yes <input type=""radio"" name=""host_quan""> No ";
-                    //document.write(  "POOP"+ "<br>" );
-                    //document.write(second + "<br>");                  
-                }
-           </script>       
-           <br>
+            Is it fabric ?   <input type="radio" id="demo1" > Yes</input> <input type="radio"  id="demo2">No</input>
+                     
+        <h3>
+            if you answered yes to the question above answers these below<br>
+            Fully Redundant <input type="radio" id="fullyr1"> Yes</input> <input type="radio" id="fullr2">No</input><br>
+            Zone/ VLAN <input type="radio" id="fullyr1"> Yes</input> <input type="radio" id="fullr2">No</input><br>
+            if you answered yes to the qurstion above please answer this<br>
+            Zone/ VLAN Template <input type="radio" id="fullyr1"> Yes</input> <input type="radio" id="fullr2">No</input><br>
+        </h3>
+                   <br>
             Protocol Number <input type="number" name="quantity" min="1" max="5">
            <br>
             U Count/item <input type="number" name="quantity">
@@ -56,10 +43,10 @@
             <br>
             Speed:<br>
                       <select name="cars" multiple>
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                        <option value="option3">option3</option>
+                        <option value="option4">option4</option>
            </select>
             <br>
             <br>
@@ -114,7 +101,7 @@
         <option value="audi">Audi</option>
         </select>
         <input type="submit">
-   
+        <br><br><br>
         -->
 
         <input type="submit">    
