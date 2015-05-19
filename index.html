@@ -24,51 +24,143 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h1 class="text-center">NetApp Server Request </h1>
 
-                    <input type="text" class="form-control input-lg" placeholder="Requestor">                    
+                    <input type="text" class="form-control input-lg" placeholder="Requestor">
+                    <br>
+
+                    Start Date <input type="date" class="form-control input-lg" placeholder="Start Date">
+                    End Date <input type="date" class="form-control input-lg" placeholder="End Date">
+                    <br>
+
+
+                    Description: <br>
+                    <textarea rows="4" cols="50" id="descr"></textarea>
+                    <br>
+                    <br>
+                    <input type="number" onclick="showElem()" id="hostNum" class="form-control input-lg" placeholder="Number of Hosts" min="0" max="10"> <br>
+
+                    <div id="pdiv1" style="display:none">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used " min="1" max="5" id="protocols1">
+                    </div>
+                    <div id="pdiv2" style="display:none">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 1 " min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 2 " min="1" max="5" id="protocols1">
+                    </div>
+                    <div id="pdiv3" style="display:none">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 1" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 2" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 3" min="1" max="5" id="protocols1">
+                    </div>
+                    <div id="pdiv4" style="display:none">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 1" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 2" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 3" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 4" min="1" max="5" id="protocols1">
+                    </div>
+                    <div id="pdiv5" style="display:none">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 1" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 2" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 3" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 4" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 5" min="1" max="5" id="protocols1">
+                    </div>
+                    <div id="pdiv6" style="display:none">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 1" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 2" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 3" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 4" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 5" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 6" min="1" max="5" id="protocols1">
+                    </div>
+                    <div id="pdiv7" style="display:none">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 1" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 2" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 3" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 4" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 5" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 6" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 7" min="1" max="5" id="protocols1">
+                    </div>
+                    <div id="pdiv8" style="display:none">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 1" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 2" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 3" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 4" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 5" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 6" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 7" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 8" min="1" max="5" id="protocols1">
+                    </div>
+                    <div id="pdiv9" style="display:none">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 1" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 2" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 3" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 4" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 5" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 6" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 7" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 8" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 9" min="1" max="5" id="protocols1">
+                    </div>
+                    <div id="pdiv9" style="display:none">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 1" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 2" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 3" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 4" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 5" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 6" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 7" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 8" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 9" min="1" max="5" id="protocols1">
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used 10" min="1" max="5" id="protocols1">
+                   </div>
+
+
+
+                      <div id="div2" style="display:none">
+                        <p id="isfab"> *is it fabric</p>  <input type="button" value="Yes" onclick="window.open(this.value)" id="demo1" yes>  </input>  <input type="button" value="No" onclick="window.open(this.value)" id="demo2" yes>  </input>
                         <br>
-
-                       Start Date <input type="date" class="form-control input-lg" placeholder="Start Date"> 
-                       End Date <input type="date" class="form-control input-lg" placeholder="End Date">
-                        <br>                  
-                    
-
-                        Description: <br>
-                        <textarea rows="4" cols="50" id="descr"></textarea>
-                        <br>
-                        <br>
-                    <input type="number" onclick="buildhost()" id="hostNum" class="form-control input-lg" placeholder="Number of Hosts" min="1"> <br>
-
-                      <script>
-                          function buildhost() {
-                              var hostNum = document.getElementById("hostNum");
-                              var i =0;
-                              foreach(i=0;i<hostNum;i++){
-                                  document.getElementById("protocols1").style.visibility = "visible";
-                              }
-                          }
-                      </script>
-
-                         
-                       <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used " min="1" max="5" id="protocols1"> 
-                                          
+                       </div>
                    
-                                        
-                   <p id="isfab"> *is it fabric</p>  <input type="button" value="Yes" onclick="window.open(this.value)" id="demo1" Yes>  </input>  <input type="button" value="No" onclick="window.open(this.value)" id="demo2" yes>  </input>  
-                        <br>
-                     
 
-
-                       <script>
-                           function hideElem() {
-                               document.getElementById("demo1").style.visibility = "hidden";
-                               document.getElementById("demo2").style.visibility = "hidden";
-                               document.getElementById("demo2").style.visibility = "protocols1";
+                       <script>                          
+                           function showElem(Host_Num) {
+                               var hostset;
+                               if (Host_Num == 1) {
+                                   hostset = pdiv1;
+                               }
+                               if (Host_Num == 2) {
+                                   hostset = pdiv2;
+                               }
+                               if (Host_Num == 3) {
+                                   hostset = pdiv3;
+                               }
+                               if (Host_Num == 4) {
+                                   hostset = pdiv4;
+                               }
+                               if (Host_Num == 5) {
+                                   hostset = pdiv5;
+                               }
+                               if (Host_Num == 6) {
+                                   hostset = pdiv6;
+                               }
+                               if (Host_Num == 7) {
+                                   hostset = pdiv7;
+                               }
+                               if (Host_Num == 8) {
+                                   hostset = pdiv8;
+                               }
+                               if (Host_Num == 9) {
+                                   hostset = pdiv9;
+                               }
+                               if (Host_Num == 10) {
+                                   hostset = pdiv10;
+                               }
+                               return hostset;
                            }
-
-                           function showElem() {
-                               document.getElementById("demo1").style.visibility = "visible";
-                               document.getElementById("demo2").style.visibility = "visible";
-                           }
+                           // get data submitted and pass through java script 
+                          // var selection = document.getElementById(").form;
+                           var pick = showElem(selection);
+                           document.getElementById(pick).style.display = "";
                        </script>
                         
                         
