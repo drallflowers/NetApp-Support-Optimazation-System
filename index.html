@@ -36,20 +36,45 @@
                         <textarea rows="4" cols="50" id="descr"></textarea>
                         <br>
                         <br>
-                       <input type="number" class="form-control input-lg" placeholder="Number of Hosts"> <br>
-                       <input type="number" class="form-control input-lg" placeholder="Number of Arrays"> <br>    
-                       <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used " min="1" max="5">                    
-                        <br> 
+                    <input type="number" onclick="buildhost()" id="hostNum" class="form-control input-lg" placeholder="Number of Hosts" min="1"> <br>
+
+                      <script>
+                          function buildhost() {
+                              var hostNum = document.getElementById("hostNum");
+                              var i =0;
+                              foreach(i=0;i<hostNum;i++){
+                                  document.getElementById("protocols1").style.visibility = "visible";
+                              }
+                          }
+                      </script>
+
+                         
+                       <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used " min="1" max="5" id="protocols1"> 
+                                          
+                   
                                         
-                   <h4>  Is it fabric ? <input type="radio" value="http:/Fabric config.html" onclick="window.open(this.value)" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input>  </h4>
+                   <p id="isfab"> *is it fabric</p>  <input type="button" value="Yes" onclick="window.open(this.value)" id="demo1" Yes>  </input>  <input type="button" value="No" onclick="window.open(this.value)" id="demo2" yes>  </input>  
                         <br>
                      
 
 
-                       
+                       <script>
+                           function hideElem() {
+                               document.getElementById("demo1").style.visibility = "hidden";
+                               document.getElementById("demo2").style.visibility = "hidden";
+                               document.getElementById("demo2").style.visibility = "protocols1";
+                           }
+
+                           function showElem() {
+                               document.getElementById("demo1").style.visibility = "visible";
+                               document.getElementById("demo2").style.visibility = "visible";
+                           }
+                       </script>
                         
                         
                         <!--
+                            <input type="number" class="form-control input-lg" placeholder="Number of Arrays"> <br>  
+                        
                          Switch:<br>
                          <select name="cars" multiple>
                          <option value="volvo">Volvo</option>
