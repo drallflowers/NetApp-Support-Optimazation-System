@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title> Support optimazation project  </title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="/Bootstrap/css/styles.css" rel="stylesheet">
+    <link href="/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Bootstrap/js/bootstrap.min.js" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <h1 class="text-center">Fabric config</h1>
+
+                    <p id="isfab"> *is it fabric  <input type="radio" onclick="openDiv3()" id="isfabY" yes> Yes </input>  <input type="radio" id="isfabN"> No </input> </p>
+
+                    <div id="div3" style="display:none">
+                        <p id="isfulR"> *is it fully redundant  <input type="radio" value="Yes" id="isfulRY"> Yes </input>  <input type="radio" value="No" id="isfulRN">No</input>  </p>
+                        <p id="Zone"> *Zone / VLAN    <input type="radio" value="Yes" onclick="openDiv4()" id="ZoneY">  </input> Yes<input type="radio" value="No" id="ZoneN">No </input> </p>
+                        <div id="div4" style="display:none">
+                            <p id="Zone/Template">
+                                *Zone / VLAN Template    <br> <select name="VTemp1" multiple>
+                                    <option value="template1">Template1</option>
+                                    <option value="template2">Template2</option>
+                                    <option value="template3">Template3</option>
+                                    <option value="template4">Template4</option>
+                                </select>
+                            </p> <br>
+                        </div>
+                    </div>
+                     
+                    <script>
+                                       
+                                    function openDiv4() {
+                                        document.getElementById("div4").style.display = "";
+                                    }
+
+                                    function openDiv3(){
+                                        document.getElementById("div3").style.display = "";
+                                    }
+                  </script>
+
+                    <form action="http:/index.html">
+                        <button   class="back" aria-hidden="true"> back </button>
+                    </form>
+                    <form action="http:/Host.html">
+                        <button class="back" aria-hidden="true"> next </button>
+                    </form>
+
+                    <form action="http:/Host.html">
+                        <button   class="btn btn-primary btn-lg btn-block">Submit</button>
+                    </form>
+
+
+    
+    
+    </h2>
+    <!-- script references -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+                    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
