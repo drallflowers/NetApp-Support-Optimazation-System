@@ -20,10 +20,9 @@
     <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <div class="modal-header">                    
                     <h1 class="text-center">NetApp Server Request </h1>
-
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <input type="text" class="form-control input-lg" placeholder="Requestor">
                     <br>
 
@@ -36,68 +35,24 @@
                     <br>
                     <br>
                     <form >
-                        <input type="number"id="host_num"  onclick="showElem()" class="form-control input-lg" placeholder="Number of Hosts" min="0" max="10"> <br>
-
+                        <input type="number"id="host_num"  onchange="sendData()" class="form-control input-lg" placeholder="Number of Hosts" min="0" max="10"> <br>
                     </form >                 
                       <form>
-                        <input type="number" id="host_num" onclick="showElem()" class="form-control input-lg" placeholder="Number of Arrays" min="0" max="10"> <br>
-
+                        <input type="number" id="host_num"  class="form-control input-lg" placeholder="Number of Arrays" min="0" max="10"> <br>
                     </form>
 
+                    <script>
+                        function sendData() {
+                            var data = document.getElementById("host_num").value;
+                            localStorage.setItem("host_data", data);
+                        }
+                    </script>
                         
-                        <!--
-                            <input type="number" class="form-control input-lg" placeholder="Number of Arrays"> <br>  
-                        
-                         Switch:<br>
-                         <select name="cars" multiple>
-                         <option value="volvo">Volvo</option>
-                         <option value="saab">Saab</option>
-                         <option value="opel">Opel</option>
-                         <option value="audi">Audi</option>
-                         </select>
-                         <input type="submit">
-                         <br><br><br>
+                    <form action="http:/Fabric config.html">
+                        <button class="back" aria-hidden="true"> next </button>
+                    </form>
 
-                         Interface:<br>
-                         <select name="cars" multiple>
-                         <option value="volvo">Volvo</option>
-                         <option value="saab">Saab</option>
-                         <option value="opel">Opel</option>
-                         <option value="audi">Audi</option>
-                         </select>
-                         <input type="submit">
-                         <br><br><br>
 
-                         Host type:<br>
-                         <select name="cars" multiple>
-                         <option value="volvo">Volvo</option>
-                         <option value="saab">Saab</option>
-                         <option value="opel">Opel</option>
-                         <option value="audi">Audi</option>
-                         </select>
-                         <input type="submit">
-                         <br><br><br>
-
-                         Start Date:<br>
-                        <select name="cars" multiple>
-                         <option value="volvo">Volvo</option>
-                         <option value="saab">Saab</option>
-                         <option value="opel">Opel</option>
-                         <option value="audi">Audi</option>
-                         </select>
-                         <input type="submit">
-                         <br><br><br>
-
-                         End Date:<br>
-                         <select name="cars" multiple>
-                         <option value="volvo">Volvo</option>
-                         <option value="saab">Saab</option>
-                         <option value="opel">Opel</option>
-                         <option value="audi">Audi</option>
-                         </select>
-                         <input type="submit">
-                         <br><br><br>
-                         -->
                     <br>
                     <form action="http:/Fabric config.html">
                         <button  class="btn btn-primary btn-lg btn-block">Submit</button>
