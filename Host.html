@@ -15,7 +15,7 @@
     <link href="/Bootstrap/js/bootstrap.min.js" rel="stylesheet">
 </head>
 
-<body>
+<body onload="showElem()">
 
     <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -24,110 +24,1693 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h1 class="text-center">Host config </h1>
                     
-                    <input type="number" class="form-control input-lg" placeholder=" Protocol Number Used " min="1" max="5">
-                    <br>
-                    Architecture <br><select name="cars" multiple>
-                                    <option value="option1">option1</option>
-                                    <option value="option2">option2</option>
-                                    <option value="option3">option3</option>
-                                    <option value="option4">option4</option>
-                                </select>                  
-                    
-                    <br>
-                     Min Ram <br><select name="cars" multiple>
-                                <option value="option1">option1</option>
-                                <option value="option2">option2</option>
-                                <option value="option3">option3</option>
-                                <option value="option4">option4</option>
-                          </select>  
-                 
-                    <br>
-                    Min CPU Cores <br> <select name="cars" multiple>
-                                    <option value="option1">option1</option>
-                                    <option value="option2">option2</option>
-                                    <option value="option3">option3</option>
-                                    <option value="option4">option4</option>
-                                </select>  
-                    
                    
-                    <br>
-                    Min CPU Speed <br><select name="cars" multiple>
-                                    <option value="option1">option1</option>
-                                    <option value="option2">option2</option>
-                                    <option value="option3">option3</option>
-                                    <option value="option4">option4</option>
-                                 </select>  
 
 
                     <div id="pdiv1" style="display:none">
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host1 " min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
 
-
-                        <p id="isfab"> *is it fabric  <input type="radio" onclick="openDiv3()" id="isfabY" yes> Yes </input>  <input type="radio" id="isfabN"> No </input> </p>
-
-                        <d
-                        </div>
-
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>                     
+                          
+                        <br>
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host1 " min="1" max="5" id="protocols1">                 
+                         <br>   
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        Installed HBA/CNA/NIC <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
 
                     </div>
                     <div id="pdiv2" style="display:none">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 1 " min="1" max="5" id="protocols1">
+
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 2 " min="1" max="5" id="protocols1">
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>                      
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host1 " min="1" max="5" id="protocols1">
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        Installed HBA/CNA/NIC <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        <br>
+
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>              
+
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host1 " min="1" max="5" id="protocols1">
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        Installed HBA/CNA/NIC <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                     </div>
                     <div id="pdiv3" style="display:none">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                       
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 1" min="1" max="5" id="protocols1">
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 2" min="1" max="5" id="protocols1">
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>                     
+                          
+                        <br>
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host2 " min="1" max="5" id="protocols1">                 
+                         <br>   
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        Installed HBA/CNA/NIC <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 3" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
+                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 4" min="1" max="5" id="protocols1">
                     </div>
                     <div id="pdiv4" style="display:none">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 1" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 2" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 3" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 4" min="1" max="5" id="protocols1">
                     </div>
                     <div id="pdiv5" style="display:none">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 1" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 2" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 3" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 4" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 5" min="1" max="5" id="protocols1">
                     </div>
                     <div id="pdiv6" style="display:none">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 1" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 2" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 3" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 4" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 5" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 6" min="1" max="5" id="protocols1">
                     </div>
                     <div id="pdiv7" style="display:none">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 1" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 2" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 3" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 4" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 5" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 6" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 7" min="1" max="5" id="protocols1">
                     </div>
                     <div id="pdiv8" style="display:none">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 1" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 2" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 3" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 4" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 5" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 6" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 7" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 8" min="1" max="5" id="protocols1">
                     </div>
                     <div id="pdiv9" style="display:none">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 1" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 2" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 3" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 4" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 5" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 6" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 7" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 8" min="1" max="5" id="protocols1">
+                        <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min Ram <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <br>
+                        Min CPU Cores <br> <select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+
+                        <br>
+                        Min CPU Speed <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host 9" min="1" max="5" id="protocols1">
                     </div>
                     <div id="pdiv9" style="display:none">
@@ -147,6 +1730,8 @@
 
 
                     <script>
+                        var listvalues = localStorage.getItem("host_data");                     
+
 
                         function openDiv4() {
                             document.getElementById("div4").style.display = "";
@@ -190,51 +1775,53 @@
 
                         }
 
-
-                        function showElem() {
-                            var Host_Num = document.getElementById("host_num").value;
-                            var hostset;
-                            if (Host_Num == 1) {
-                                hostset = "pdiv1";
-                            }
-                            if (Host_Num == 2) {
-                                hostset = "pdiv2";
-                            }
-                            if (Host_Num == 3) {
-                                hostset = "pdiv3";
-                            }
-                            if (Host_Num == 4) {
-                                hostset = "pdiv4";
-                            }
-                            if (Host_Num == 5) {
-                                hostset = "pdiv5";
-                            }
-                            if (Host_Num == 6) {
-                                hostset = "pdiv6";
-                            }
-                            if (Host_Num == 7) {
-                                hostset = "pdiv7";
-                            }
-                            if (Host_Num == 8) {
-                                hostset = "pdiv8";
-                            }
-                            if (Host_Num == 9) {
-                                hostset = "pdiv9";
-                            }
-                            if (Host_Num == 10) {
-                                hostset = "pdiv10";
-                            }
+                      
 
 
-                            document.getElementById(hostset).style.display = "";
-                            closeElem(hostset);
-                        }
+                            function showElem() {
+                                var Host_Num = listvalues;
+                                var hostset;
+                                if (Host_Num == 1) {
+                                    hostset = "pdiv1";
+                                }
+                                if (Host_Num == 2) {
+                                    hostset = "pdiv2";
+                                }
+                                if (Host_Num == 3) {
+                                    hostset = "pdiv3";
+                                }
+                                if (Host_Num == 4) {
+                                    hostset = "pdiv4";
+                                }
+                                if (Host_Num == 5) {
+                                    hostset = "pdiv5";
+                                }
+                                if (Host_Num == 6) {
+                                    hostset = "pdiv6";
+                                }
+                                if (Host_Num == 7) {
+                                    hostset = "pdiv7";
+                                }
+                                if (Host_Num == 8) {
+                                    hostset = "pdiv8";
+                                }
+                                if (Host_Num == 9) {
+                                    hostset = "pdiv9";
+                                }
+                                if (Host_Num == 10) {
+                                    hostset = "pdiv10";
+                                }
 
 
-
+                                document.getElementById(hostset).style.display = "";
+                                closeElem(hostset);
+                            }
+                        
                     </script>
 
-
+                <form action="http:/Fabric config.html">
+                    <button class="back" aria-hidden="true"> back </button>
+                </form>
 
 
                     <button value="http:/Host.html" onclick="window.open(this.value)" class="btn btn-primary btn-lg btn-block">Submit</button>
