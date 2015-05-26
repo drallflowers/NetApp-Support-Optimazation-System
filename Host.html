@@ -242,6 +242,7 @@
                     </div>
                     <div id="hdiv10" style="display:none">
                         <button ondblclick="closeconfig()" onclick="showHostConfig10()" class="host10" aria-hidden="true"> host10 </button>
+                        <br>
                     </div>
 
                  
@@ -249,6 +250,13 @@
 
                     <div id="pdiv1" style="display:none">
                         <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         Architecture <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
@@ -257,37 +265,36 @@
                         </select>
 
                         <br>
-                        Min Ram <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        Min CPU Cores <br> <select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host1 " min="1" max="5" id="protocols1">
-                        <br>
-                        Min CPU Speed <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-                        <br>
                         Installed HBA/CNA/NIC <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
                             <option value="option3">option3</option>
                             <option value="option4">option4</option>
                         </select>
+
+                        <br>
+                        Protocol Host1 <br><select name="cars" multiple>
+                            <option value="option4">None </option>
+                            <option value="option1">FC 4Gbps</option>
+                            <option value="option2">FC 8Gbps</option>
+                            <option value="option3">FC 16Gbps</option>
+                            <option value="option4">IB 10Gbps</option>
+                            <option value="option1">IB 20Gbps</option>
+                            <option value="option2">IB 40Gbps</option>
+                            <option value="option3">iSCSI 1Gbps</option>
+                            <option value="option4">iSCSI 10Gbps</option>
+                            <option value="option4">iSCSI 40Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                            <option value="option3">SAS 3Gbps</option>
+                            <option value="option4">SAS 6Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                        </select>                                      
+                        <br>
+                        User provided server<input type="radio" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input> <br>
+                        <br>
+
+                    </div>
+                    <div id="pdiv2" style="display:none">                      
                         <br>
                         Installed OS <br><select name="cars" multiple>
                             <option value="option1">option1</option>
@@ -296,61 +303,51 @@
                             <option value="option4">option4</option>
                         </select>
                         <br>
+                        Architecture <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
 
-                    </div>
-                    <div id="pdiv2" style="display:none">
-                    <br>
-                    Architecture <br><select name="cars" multiple>
-                        <option value="option1">option1</option>
-                        <option value="option2">option2</option>
-                        <option value="option3">option3</option>
-                        <option value="option4">option4</option>
-                    </select>
+                        <br>
+                        Installed HBA/CNA/NIC <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
 
-                    <br>
-                    Min Ram <br><select name="cars" multiple>
-                        <option value="option1">option1</option>
-                        <option value="option2">option2</option>
-                        <option value="option3">option3</option>
-                        <option value="option4">option4</option>
-                    </select>
-
-                    <br>
-                    Min CPU Cores <br> <select name="cars" multiple>
-                        <option value="option1">option1</option>
-                        <option value="option2">option2</option>
-                        <option value="option3">option3</option>
-                        <option value="option4">option4</option>
-                    </select>
-
-                    <br>
-                    <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host2 " min="1" max="5" id="protocols1">
-                    <br>
-                    Min CPU Speed <br><select name="cars" multiple>
-                        <option value="option1">option1</option>
-                        <option value="option2">option2</option>
-                        <option value="option3">option3</option>
-                        <option value="option4">option4</option>
-                    </select>
-                    <br>
-                    Installed HBA/CNA/NIC <br><select name="cars" multiple>
-                        <option value="option1">option1</option>
-                        <option value="option2">option2</option>
-                        <option value="option3">option3</option>
-                        <option value="option4">option4</option>
-                    </select>
-                    <br>
-                    Installed OS <br><select name="cars" multiple>
-                        <option value="option1">option1</option>
-                        <option value="option2">option2</option>
-                        <option value="option3">option3</option>
-                        <option value="option4">option4</option>
-                    </select>
-                    <br>
-
+                        <br>
+                        Protocol Host2 <br><select name="cars" multiple>
+                            <option value="option4">None </option>
+                            <option value="option1">FC 4Gbps</option>
+                            <option value="option2">FC 8Gbps</option>
+                            <option value="option3">FC 16Gbps</option>
+                            <option value="option4">IB 10Gbps</option>
+                            <option value="option1">IB 20Gbps</option>
+                            <option value="option2">IB 40Gbps</option>
+                            <option value="option3">iSCSI 1Gbps</option>
+                            <option value="option4">iSCSI 10Gbps</option>
+                            <option value="option4">iSCSI 40Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                            <option value="option3">SAS 3Gbps</option>
+                            <option value="option4">SAS 6Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                        </select>
+                        <br>
+                        User provided server<input type="radio" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input> <br>
+                        <br>
                 </div>
                     <div id="pdiv3" style="display:none">
                         <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         Architecture <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
@@ -359,49 +356,43 @@
                         </select>
 
                         <br>
-                        Min Ram <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        Min CPU Cores <br> <select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host3 " min="1" max="5" id="protocols1">
-                        <br>
-                        Min CPU Speed <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-                        <br>
                         Installed HBA/CNA/NIC <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
                             <option value="option3">option3</option>
                             <option value="option4">option4</option>
                         </select>
+
                         <br>
-                        Installed OS <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
+                        Protocol Host3 <br><select name="cars" multiple>
+                            <option value="option4">None </option>
+                            <option value="option1">FC 4Gbps</option>
+                            <option value="option2">FC 8Gbps</option>
+                            <option value="option3">FC 16Gbps</option>
+                            <option value="option4">IB 10Gbps</option>
+                            <option value="option1">IB 20Gbps</option>
+                            <option value="option2">IB 40Gbps</option>
+                            <option value="option3">iSCSI 1Gbps</option>
+                            <option value="option4">iSCSI 10Gbps</option>
+                            <option value="option4">iSCSI 40Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                            <option value="option3">SAS 3Gbps</option>
+                            <option value="option4">SAS 6Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
                         </select>
                         <br>
-
+                        User provided server<input type="radio" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input> <br>
+                        <br>
                     </div>
                     <div id="pdiv4" style="display:none">
                         <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         Architecture <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
@@ -410,49 +401,43 @@
                         </select>
 
                         <br>
-                        Min Ram <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        Min CPU Cores <br> <select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host4 " min="1" max="5" id="protocols1">
-                        <br>
-                        Min CPU Speed <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-                        <br>
                         Installed HBA/CNA/NIC <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
                             <option value="option3">option3</option>
                             <option value="option4">option4</option>
                         </select>
+
                         <br>
-                        Installed OS <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
+                        Protocol Host4 <br><select name="cars" multiple>
+                            <option value="option4">None </option>
+                            <option value="option1">FC 4Gbps</option>
+                            <option value="option2">FC 8Gbps</option>
+                            <option value="option3">FC 16Gbps</option>
+                            <option value="option4">IB 10Gbps</option>
+                            <option value="option1">IB 20Gbps</option>
+                            <option value="option2">IB 40Gbps</option>
+                            <option value="option3">iSCSI 1Gbps</option>
+                            <option value="option4">iSCSI 10Gbps</option>
+                            <option value="option4">iSCSI 40Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                            <option value="option3">SAS 3Gbps</option>
+                            <option value="option4">SAS 6Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
                         </select>
                         <br>
-
+                        User provided server<input type="radio" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input> <br>
+                        <br>
                     </div>
                     <div id="pdiv5" style="display:none">
                         <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         Architecture <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
@@ -461,49 +446,43 @@
                         </select>
 
                         <br>
-                        Min Ram <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        Min CPU Cores <br> <select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host5 " min="1" max="5" id="protocols1">
-                        <br>
-                        Min CPU Speed <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-                        <br>
                         Installed HBA/CNA/NIC <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
                             <option value="option3">option3</option>
                             <option value="option4">option4</option>
                         </select>
+
                         <br>
-                        Installed OS <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
+                        Protocol Host5 <br><select name="cars" multiple>
+                            <option value="option4">None </option>
+                            <option value="option1">FC 4Gbps</option>
+                            <option value="option2">FC 8Gbps</option>
+                            <option value="option3">FC 16Gbps</option>
+                            <option value="option4">IB 10Gbps</option>
+                            <option value="option1">IB 20Gbps</option>
+                            <option value="option2">IB 40Gbps</option>
+                            <option value="option3">iSCSI 1Gbps</option>
+                            <option value="option4">iSCSI 10Gbps</option>
+                            <option value="option4">iSCSI 40Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                            <option value="option3">SAS 3Gbps</option>
+                            <option value="option4">SAS 6Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
                         </select>
                         <br>
-
+                        User provided server<input type="radio" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input> <br>
+                        <br>
                     </div>
                     <div id="pdiv6" style="display:none">
                         <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         Architecture <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
@@ -512,49 +491,43 @@
                         </select>
 
                         <br>
-                        Min Ram <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        Min CPU Cores <br> <select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host6 " min="1" max="5" id="protocols1">
-                        <br>
-                        Min CPU Speed <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-                        <br>
                         Installed HBA/CNA/NIC <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
                             <option value="option3">option3</option>
                             <option value="option4">option4</option>
                         </select>
+
                         <br>
-                        Installed OS <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
+                        Protocol Host6 <br><select name="cars" multiple>
+                            <option value="option4">None </option>
+                            <option value="option1">FC 4Gbps</option>
+                            <option value="option2">FC 8Gbps</option>
+                            <option value="option3">FC 16Gbps</option>
+                            <option value="option4">IB 10Gbps</option>
+                            <option value="option1">IB 20Gbps</option>
+                            <option value="option2">IB 40Gbps</option>
+                            <option value="option3">iSCSI 1Gbps</option>
+                            <option value="option4">iSCSI 10Gbps</option>
+                            <option value="option4">iSCSI 40Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                            <option value="option3">SAS 3Gbps</option>
+                            <option value="option4">SAS 6Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
                         </select>
                         <br>
-
+                        User provided server<input type="radio" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input> <br>
+                        <br>
                     </div>
                     <div id="pdiv7" style="display:none">
                         <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         Architecture <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
@@ -563,49 +536,43 @@
                         </select>
 
                         <br>
-                        Min Ram <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        Min CPU Cores <br> <select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host7 " min="1" max="5" id="protocols1">
-                        <br>
-                        Min CPU Speed <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-                        <br>
                         Installed HBA/CNA/NIC <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
                             <option value="option3">option3</option>
                             <option value="option4">option4</option>
                         </select>
+
                         <br>
-                        Installed OS <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
+                        Protocol Host7 <br><select name="cars" multiple>
+                            <option value="option4">None </option>
+                            <option value="option1">FC 4Gbps</option>
+                            <option value="option2">FC 8Gbps</option>
+                            <option value="option3">FC 16Gbps</option>
+                            <option value="option4">IB 10Gbps</option>
+                            <option value="option1">IB 20Gbps</option>
+                            <option value="option2">IB 40Gbps</option>
+                            <option value="option3">iSCSI 1Gbps</option>
+                            <option value="option4">iSCSI 10Gbps</option>
+                            <option value="option4">iSCSI 40Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                            <option value="option3">SAS 3Gbps</option>
+                            <option value="option4">SAS 6Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
                         </select>
                         <br>
-
+                        User provided server<input type="radio" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input> <br>
+                        <br>
                     </div>
                     <div id="pdiv8" style="display:none">
                         <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         Architecture <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
@@ -614,49 +581,43 @@
                         </select>
 
                         <br>
-                        Min Ram <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        Min CPU Cores <br> <select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host8 " min="1" max="5" id="protocols1">
-                        <br>
-                        Min CPU Speed <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-                        <br>
                         Installed HBA/CNA/NIC <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
                             <option value="option3">option3</option>
                             <option value="option4">option4</option>
                         </select>
+
                         <br>
-                        Installed OS <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
+                        Protocol Host8 <br><select name="cars" multiple>
+                            <option value="option4">None </option>
+                            <option value="option1">FC 4Gbps</option>
+                            <option value="option2">FC 8Gbps</option>
+                            <option value="option3">FC 16Gbps</option>
+                            <option value="option4">IB 10Gbps</option>
+                            <option value="option1">IB 20Gbps</option>
+                            <option value="option2">IB 40Gbps</option>
+                            <option value="option3">iSCSI 1Gbps</option>
+                            <option value="option4">iSCSI 10Gbps</option>
+                            <option value="option4">iSCSI 40Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                            <option value="option3">SAS 3Gbps</option>
+                            <option value="option4">SAS 6Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
                         </select>
                         <br>
-
+                        User provided server<input type="radio" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input> <br>
+                        <br>
                     </div>
                     <div id="pdiv9" style="display:none">
                         <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         Architecture <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
@@ -665,49 +626,43 @@
                         </select>
 
                         <br>
-                        Min Ram <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        Min CPU Cores <br> <select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host9 " min="1" max="5" id="protocols1">
-                        <br>
-                        Min CPU Speed <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-                        <br>
                         Installed HBA/CNA/NIC <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
                             <option value="option3">option3</option>
                             <option value="option4">option4</option>
                         </select>
+
                         <br>
-                        Installed OS <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
+                        Protocol Host9 <br><select name="cars" multiple>
+                            <option value="option4">None </option>
+                            <option value="option1">FC 4Gbps</option>
+                            <option value="option2">FC 8Gbps</option>
+                            <option value="option3">FC 16Gbps</option>
+                            <option value="option4">IB 10Gbps</option>
+                            <option value="option1">IB 20Gbps</option>
+                            <option value="option2">IB 40Gbps</option>
+                            <option value="option3">iSCSI 1Gbps</option>
+                            <option value="option4">iSCSI 10Gbps</option>
+                            <option value="option4">iSCSI 40Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                            <option value="option3">SAS 3Gbps</option>
+                            <option value="option4">SAS 6Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
                         </select>
                         <br>
-
+                        User provided server<input type="radio" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input> <br>
+                        <br>
                     </div>
                     <div id="pdiv10" style="display:none">
                         <br>
+                        Installed OS <br><select name="cars" multiple>
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+                        <br>
                         Architecture <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
@@ -716,46 +671,33 @@
                         </select>
 
                         <br>
-                        Min Ram <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        Min CPU Cores <br> <select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-
-                        <br>
-                        <input type="number" class="form-control input-lg" placeholder=" Number of Protocols Used Host10 " min="1" max="5" id="protocols1">
-                        <br>
-                        Min CPU Speed <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
-                        </select>
-                        <br>
                         Installed HBA/CNA/NIC <br><select name="cars" multiple>
                             <option value="option1">option1</option>
                             <option value="option2">option2</option>
                             <option value="option3">option3</option>
                             <option value="option4">option4</option>
                         </select>
+
                         <br>
-                        Installed OS <br><select name="cars" multiple>
-                            <option value="option1">option1</option>
-                            <option value="option2">option2</option>
-                            <option value="option3">option3</option>
-                            <option value="option4">option4</option>
+                        Protocol Host10 <br><select name="cars" multiple>
+                            <option value="option4">None </option>
+                            <option value="option1">FC 4Gbps</option>
+                            <option value="option2">FC 8Gbps</option>
+                            <option value="option3">FC 16Gbps</option>
+                            <option value="option4">IB 10Gbps</option>
+                            <option value="option1">IB 20Gbps</option>
+                            <option value="option2">IB 40Gbps</option>
+                            <option value="option3">iSCSI 1Gbps</option>
+                            <option value="option4">iSCSI 10Gbps</option>
+                            <option value="option4">iSCSI 40Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
+                            <option value="option3">SAS 3Gbps</option>
+                            <option value="option4">SAS 6Gbps</option>
+                            <option value="option4">SAS 12Gbps</option>
                         </select>
                         <br>
-
+                        User provided server<input type="radio" id="demo1"> Yes </input> <input type="radio" id="demo2">No</input> <br>
+                        <br>
                     </div>
 
 
@@ -852,12 +794,22 @@
                             }
                         
                     </script>
-                    
-                <form action="http:/Fabric config.html">
-                    <button class="back" aria-hidden="true"> back </button>
-                </form>
+                 <br>
+                 <br>   
+                    Comments: <br>
+                    <textarea rows="4" cols="50" id="descr" maxlength="64"></textarea>
+                    <br>
+                    <br>
+                    <form action="http:/Fabric config.html">
+                        <button class="back" aria-hidden="true"> back </button>
+                    </form>
 
-                    <button value="http:/Host.html" onclick="window.open(this.value)" class="btn btn-primary btn-lg btn-block">Submit</button>
+                    <form action="http:/Provided.html">
+                        <button class="back" aria-hidden="true"> next </button>
+                    </form>
+                    <form action="http:/Provided.html">
+                        <button class="btn btn-primary btn-lg btn-block">Submit</button>
+                    </form>
 
                     </h2>
                     <!-- script references -->
