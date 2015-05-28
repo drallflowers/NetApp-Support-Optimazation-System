@@ -20,25 +20,25 @@
     <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">                    
+                <div class="modal-header">
                     <h1 class="text-center">NetApp Server Request </h1>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <input type="text" class="form-control input-lg" placeholder="Requestor">
+                    <input type="text" id="request" class="form-control input-lg" placeholder="Requestor">
                     <br>
 
-                    Start Date <input type="date" class="form-control input-lg" placeholder="Start Date">
-                    End Date <input type="date" class="form-control input-lg" placeholder="End Date">
+                    Start Date <input type="date" id="start" class="form-control input-lg" placeholder="Start Date">
+                    End Date <input type="date" id="end" class="form-control input-lg" placeholder="End Date">
                     <br>
 
                     Description: <br>
                     <textarea rows="4" cols="50" id="descr" maxlength="32"></textarea>
                     <br>
                     <br>
-                    <form >
-                        <input type="number"id="host_num"  onchange="sendData()" class="form-control input-lg" placeholder="Number of Hosts" min="0" max="10"> <br>
-                    </form >                 
-                      <form>
-                        <input type="number" id="host_num"  class="form-control input-lg" placeholder="Number of Arrays" min="0" max="10"> <br>
+                    <form>
+                        <input type="number" id="host_num" onchange="sendData()" class="form-control input-lg" placeholder="Number of Hosts" min="0" max="10"> <br>
+                    </form>
+                    <form>
+                        <input type="number" id="array_num" class="form-control input-lg" placeholder="Number of Arrays" min="0" max="10"> <br>
                     </form>
 
                     <script>
@@ -46,19 +46,51 @@
                             var data = document.getElementById("host_num").value;
                             localStorage.setItem("host_data", data);
                         }
+
+                        function submitops() {
+                            if (document.getElementById("host_num").value == "") {
+                                document.getElementById("submission").style.display = "";
+                                return;
+                            } else if (document.getElementById("array_num").value == "") {
+                                document.getElementById("submission").style.display = "";
+                                return;
+                            } else if (document.getElementById("start").value == "") {
+                                document.getElementById("submission").style.display = "";
+                                return;
+                            }
+                            else if (document.getElementById("end").value == "") {
+                                document.getElementById("submission").style.display = "";
+                                return;
+                            }
+                            else if (document.getElementById("descr").value == "") {
+                                document.getElementById("submission").style.display = "";
+                                return;
+                            }
+                            else if (document.getElementById("request").value == "") {
+                                document.getElementById("submission").style.display = "";
+                                return;
+                            } else {
+                                window.location.href = "http:/Fabric config.html";
+                                return;
+                            }
+                        }
                     </script>
-                        
+
                     <form action="http:/Fabric config.html">
                         <button class="back" aria-hidden="true"> next </button>
                     </form>
-
-
                     <br>
-                    <form action="http:/Fabric config.html">
-                        <button  class="btn btn-primary btn-lg btn-block">Submit</button>
-                    </form>  
 
-                    </h2>
+                    <div id="submission" style="display:none">
+                    <h6 style="color:red"> *please fill in all fields before submiting </h6>
+                    </div>
+                     
+                    <br>
+                   
+                        <button  onclick="submitops()" class="btn btn-primary btn-lg btn-block">Submit</button>
+                 
+
+                    
                     <!-- script references -->
                     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
                     <script src="js/bootstrap.min.js"></script>
