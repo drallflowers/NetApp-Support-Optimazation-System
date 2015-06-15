@@ -7,6 +7,9 @@
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -21,55 +24,168 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    
-                    <h1 class="text-center">Fabric config</h1>
 
-                    <p id="isfab"> *is it fabric  <input type="radio" onclick="openDiv3()" id="isfabY" yes> Yes </input>  <input type="radio" id="isfabN"> No </input> </p>
+                    <h1 class="text-center">Fabric config</h1>
+               
+           
+                
+
+                        Is config fabric <form role="form" >
+                        <label class="radio-inline">
+                            <input type="radio" onclick="openDiv3()"  value=""  id="isfabricYes" name="optradio">Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" onclick="closeDiv3()"  value=""  id="isfabricNo" name="optradio">No
+                        </label>
+                    </form>
+                   
 
                     <div id="div3" style="display:none">
-                        <p id="isfulR"> *is it fully redundant  <input type="radio" value="Yes" id="isfulRY"> Yes </input>  <input type="radio" value="No" id="isfulRN">No</input>  </p>
-                        <p id="Zone"> *Zone / VLAN    <input type="radio" value="Yes" onclick="openDiv4()" id="ZoneY">  </input> Yes<input type="radio" value="No" id="ZoneN">No </input> </p>
-                        <div id="div4" style="display:none">
-                            <p id="Zone/Template">
-                                *Zone / VLAN Template    <br> <select name="VTemp1" multiple>
-                                    <option value="template1">Template1</option>
-                                    <option value="template2">Template2</option>
-                                    <option value="template3">Template3</option>
-                                    <option value="template4">Template4</option>
-                                </select>
-                            </p> <br>
-                        </div>
+
+                        is it fully redundant <form role="form">
+                            <label class="radio-inline">
+                                <input type="radio" on id="isfullRedunYes" value="" onclick="setvalue1()" name="optradio">Yes
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" onclick="setvalue2()" id="isfullRedunN" value="" name="optradio">No
+                            </label>
+                        </form>
+                        <br>
+
+                          Zone / VLAN   <form role="form">
+                            <label class="radio-inline">
+                                <input type="radio" onclick="openDiv4()" id="ZoneY" name="optradio">Yes
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" id="ZoneN" onclick="closeDiv4()" name="optradio">No
+                            </label>
+                        </form>
+                            
+
+
+
+
+                       
+
                     </div>
                      
                     <script>
-                                       
+
+                        function datastorage() {
+                            var isfabric = document.getElementById("isfabricYes").value;
+                            var isredunYes = document.getElementById("isfullRedunYes").value;
+                            var Zone_Vlan = document.getElementById("ZoneY").value;
+                                                      
+
+                            localStorage.setItem("isconfigfabric", isfabric);
+                            localStorage.setItem("isfullyredunant", isredunYes);
+                            localStorage.setItem("Zone_VLAN", Zone_Vlan);
+
+                        }
+
+
+                        function clearstorage() {
+
+                            var isfabric = "";
+                            var isredunYes = "";
+                            var Zone_Vlan = "";
+
+
+                            localStorage.setItem("isconfigfabric", isfabric);
+                            localStorage.setItem("isfullyredunant", isredunYes);
+                            localStorage.setItem("Zone_VLAN", Zone_Vlan);
+                            location.reload();
+
+                        }
+
+                        function submitops() {
+                            
+                                        if (document.getElementById("isfabricYes").value == "" && document.getElementById("isfabricNo").value == "") {                                                
+                                            document.getElementById("submission").style.display = "";
+                                            return;
+                                        } else {
+                                            window.location.href = "http:/index.html";
+                                        }
+                                            
+                            
+                            //            <div class="form-group  input-lg">
+                          // Zone / VLAN Template <select class="form-control input-lg" id="Zone/Template" placeholder="Zone / VLAN Template">
+                            //                        <option>template 1</option>
+                          //                         <option>template 2</option>
+                         //                      </select>
+                       // </div>  
+
+
+
+                                    }
+
+                                    function setvalue1() {
+                                        document.getElementById("isfullRedunYes").value = "yes";
+                                        document.getElementById("isfullRedunNo").value = "";
+                                    }
+
+                                    function setvalue2() {
+                                        document.getElementById("isfullRedunYes").value = "";
+                                        document.getElementById("isfullRedunNo").value = "no";
+
+
+
+                                    }
+
+
                                     function openDiv4() {
                                         document.getElementById("div4").style.display = "";
+                                        document.getElementById("ZoneY").value = "yes";
+                                        document.getElementById("ZoneN").value = "";
                                     }
 
                                     function openDiv3(){
                                         document.getElementById("div3").style.display = "";
+                                        document.getElementById("isfabricYes").value = "yes";
+                                        document.getElementById("isfabricNo").value = "";
+                                    }
+                                    
+                                    function closeDiv3() {
+                                        document.getElementById("div3").style.display = "none";
+                                        document.getElementById("isfabricNo").value = "no";
+                                        document.getElementById("isfabricYes").value = "";
+                                    }
+
+                                    function closeDiv4() {
+                                        document.getElementById("div4").style.display = "none";
+                                        document.getElementById("ZoneY").value = "";
+                                        document.getElementById("ZoneN").value = "no";
                                     }
                   </script>
 
-                    <form action="http:/index.html">
-                        <button   class="back" aria-hidden="true"> back </button>
-                    </form>
-                    <form action="http:/Host.html">
-                        <button class="back" aria-hidden="true"> next </button>
-                    </form>
+                    <br><br>
+                   
+                    <div id="submission" style="display:none">
+                        <h6 style="color:red"> *please fill in all fields before submiting </h6>
+                    </div>                
 
-                    <form action="http:/Host.html">
-                        <button   class="btn btn-primary btn-lg btn-block">Submit</button>
+                    <button style="color:red" class="back" aria-hidden="true" onclick="clearstorage()"> Start Over </button>
+                    <br><br>
+
+                    <form action="http:/Rackorg.html">
+                        <button  class="btn btn-primary btn-lg btn-block">Back</button>
                     </form>
+                          
+
+                    <div id="submission" style="display:none" class="alert alert-info">
+                        <strong>Info!</strong> if you do not have a server to provide a ticket will be opened with EES
+                    </div>
 
 
-    
-    
-    </h2>
+
+    <br>
+
+    <button onclick="submitops(); datastorage();" class="btn btn-primary btn-lg btn-block">Submit</button>
+
+
     <!-- script references -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 
-                    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
