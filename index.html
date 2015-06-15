@@ -21,30 +21,66 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="text-center">NetApp Server Request </h1>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h1 class="text-center">NetApp Server Request </h1>                 
                     <input type="text" id="request" class="form-control input-lg" placeholder="Requestor">
                     <br>
-
-                    Start Date <input type="date" id="start" class="form-control input-lg" placeholder="Start Date">
-                    End Date <input type="date" id="end" class="form-control input-lg" placeholder="End Date">
+                 
+                     Start Date  - System will need to be operational <input type="date" id="start" class="form-control input-lg" placeholder="Start Date">
                     <br>
 
-                    Description: <br>
-                    <textarea rows="4" cols="50" id="descr" maxlength="32"></textarea>
+                  
+                     End Date - System will cleared for removal from rack<input type="date" id="end" class="form-control input-lg" placeholder="End Date">
+                    <br>
+
+                     Description: <br>
+                    <textarea rows="2" cols="45" id="descr" maxlength="32"></textarea>                  
                     <br>
                     <br>
+                    
                     <form>
-                        <input type="number" id="host_num" onchange="sendData()" class="form-control input-lg" placeholder="Number of Hosts" min="0" max="10"> <br>
+                        <input type="number" id="host_num"  class="form-control input-lg" placeholder="Number of Hosts" min="0" max="10"> <br>
                     </form>
                     <form>
-                        <input type="number" id="array_num" class="form-control input-lg" placeholder="Number of Arrays" min="0" max="10"> <br>
+                         <input type="number" id="array_num"  class="form-control input-lg" placeholder="Number of Arrays" min="0" max="10"> <br>
                     </form>
 
                     <script>
-                        function sendData() {
-                            var data = document.getElementById("host_num").value;
-                            localStorage.setItem("host_data", data);
+
+                        function clearstorage() {
+                            var host = " ";
+                            var array = " ";
+                            var requestor = " ";
+                            var start_date = " ";
+                            var end_date = " ";
+                            var description = " ";
+
+
+                            localStorage.setItem("host_data", host);
+                            localStorage.setItem("array_data", array);
+                            localStorage.setItem("request", requestor);
+                            localStorage.setItem("start_date", start_date);
+                            localStorage.setItem("end_date", end_date);
+                            localStorage.setItem("description", description);
+                            location.reload();
+
+                        }
+
+
+                        function datastorage() {
+                            var host = document.getElementById("host_num").value;
+                            var array = document.getElementById("array_num").value;
+                            var requestor = document.getElementById("request").value;
+                            var start_date = document.getElementById("start").value;
+                            var end_date = document.getElementById("end").value;
+                            var description = document.getElementById("descr").value;
+
+                            localStorage.setItem("host_data", host);                           
+                            localStorage.setItem("array_data", array);
+                            localStorage.setItem("request", requestor);
+                            localStorage.setItem("start_date", start_date);
+                            localStorage.setItem("end_date", end_date);
+                            localStorage.setItem("description", description);
+                         
                         }
 
                         function submitops() {
@@ -70,25 +106,25 @@
                                 document.getElementById("submission").style.display = "";
                                 return;
                             } else {
-                                window.location.href = "http:/Fabric config.html";
+                                window.location.href = "http:/Host.html";
                                 return;
                             }
                         }
-                    </script>
+                      </script>
 
-                    <form action="http:/Fabric config.html">
-                        <button class="back" aria-hidden="true"> next </button>
-                    </form>
-                    <br>
+                   
+                   
 
                     <div id="submission" style="display:none">
-                    <h6 style="color:red"> *please fill in all fields before submiting </h6>
+                    <h6 style="color:red"> *please fill in all fields before submiting </h6><br>
                     </div>
                      
-                    <br>
                    
-                        <button  onclick="submitops()" class="btn btn-primary btn-lg btn-block">Submit</button>
-                 
+                   
+                    <button style="color:red" class="back" aria-hidden="true" onclick="clearstorage()"> Start Over </button>
+                    <br><br>
+                       
+                    <button onclick="submitops(); datastorage();" class="btn btn-primary btn-lg btn-block">Next</button>
 
                     
                     <!-- script references -->
