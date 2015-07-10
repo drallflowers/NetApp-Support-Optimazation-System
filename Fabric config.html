@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
     <meta charset="utf-8">
-    <title> Support optimazation project  </title>
-    <meta name="generator" content="Bootply" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Support optimazation project</title>
+    <meta content="Bootply" name="generator">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name=
+    "viewport">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <!--[if lt IE 9]>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src=
+    "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link href="/Bootstrap/css/styles.css" rel="stylesheet">
@@ -19,58 +22,43 @@
 </head>
 
 <body>
-
-    <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal show" id="loginModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
+                    <h1 class="text-center">Fabric config</h1>Is config fabric
 
-                    <h1 class="text-center">Fabric config</h1>
-               
-           
-                
-
-                        Is config fabric <form role="form" >
-                        <label class="radio-inline">
-                            <input type="radio" onclick="openDiv3()"  value=""  id="isfabricYes" name="optradio">Yes
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" onclick="closeDiv3()"  value=""  id="isfabricNo" name="optradio">No
-                        </label>
+                    <form>
+                        <label class="radio-inline"><input id="isfabricYes"
+                        name="optradio" onclick="openDiv3()" type="radio"
+                        value="">Yes</label> <label class=
+                        "radio-inline"><input id="isfabricNo" name="optradio"
+                        onclick="closeDiv3()" type="radio" value="">No</label>
                     </form>
-                   
 
                     <div id="div3" style="display:none">
+                        is it fully redundant
 
-                        is it fully redundant <form role="form">
-                            <label class="radio-inline">
-                                <input type="radio" on id="isfullRedunYes" value="" onclick="setvalue1()" name="optradio">Yes
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" onclick="setvalue2()" id="isfullRedunN" value="" name="optradio">No
-                            </label>
+                        <form>
+                            <label class="radio-inline"><input id=
+                            "isfullRedunYes" name="optradio" onclick=
+                            "setvalue1()" type="radio" value="">Yes</label>
+                            <label class="radio-inline"><input id=
+                            "isfullRedunN" name="optradio" onclick=
+                            "setvalue2()" type="radio" value="">No</label>
+                        </form><br>
+                        Zone / VLAN
+
+                        <form>
+                            <label class="radio-inline"><input id="ZoneY" name=
+                            "optradio" onclick="openDiv4()" type=
+                            "radio">Yes</label> <label class=
+                            "radio-inline"><input id="ZoneN" name="optradio"
+                            onclick="closeDiv4()" type="radio">No</label>
                         </form>
-                        <br>
-
-                          Zone / VLAN   <form role="form">
-                            <label class="radio-inline">
-                                <input type="radio" onclick="openDiv4()" id="ZoneY" name="optradio">Yes
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" id="ZoneN" onclick="closeDiv4()" name="optradio">No
-                            </label>
-                        </form>
-                            
-
-
-
-
-                       
-
-                    </div>
-                     
-                    <script>
-
+                    </div><script>
+    
+                        // stores userinput data from page
                         function datastorage() {
                             var isfabric = document.getElementById("isfabricYes").value;
                             var isredunYes = document.getElementById("isfullRedunYes").value;
@@ -83,7 +71,7 @@
 
                         }
 
-
+                        // clears user input from page
                         function clearstorage() {
 
                             var isfabric = "";
@@ -97,7 +85,8 @@
                             location.reload();
 
                         }
-
+                        
+                        // checks to see if all require fileds have data input , if so then it saves the data
                         function submitops() {
                             
                                         if (document.getElementById("isfabricYes").value == "" && document.getElementById("isfabricNo").value == "") {                                                
@@ -150,36 +139,34 @@
                                         document.getElementById("ZoneY").value = "";
                                         document.getElementById("ZoneN").value = "no";
                                     }
-                  </script>
+                    </script><br>
+                    <br>
 
-                    <br><br>
-                   
                     <div id="submission" style="display:none">
-                        <h6 style="color:red"> *please fill in all fields before submiting </h6>
-                    </div>                
-
-                    <button style="color:red" class="back" aria-hidden="true" onclick="clearstorage()"> Start Over </button>
-                    <br><br>
+                        <h6 style="color:red">*please fill in all fields before
+                        submiting</h6>
+                    </div><button class="back" onclick="clearstorage()" style=
+                    "color:red">Start Over</button><br>
+                    <br>
 
                     <form action="http:/Rackorg.html">
-                        <button  class="btn btn-primary btn-lg btn-block">Back</button>
+                        <button class=
+                        "btn btn-primary btn-lg btn-block">Back</button>
                     </form>
-                          
 
-                    <div id="submission" style="display:none" class="alert alert-info">
-                        <strong>Info!</strong> if you do not have a server to provide a ticket will be opened with EES
-                    </div>
-
-
-
-    <br>
-
-    <button onclick="submitops(); datastorage();" class="btn btn-primary btn-lg btn-block">Submit</button>
-
-
-    <!-- script references -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-
-    <script src="js/bootstrap.min.js"></script>
+                    <div class="alert alert-info" id="submission" style=
+                    "display:none">
+                        <strong>Info!</strong> if you do not have a server to
+                        provide a ticket will be opened with EES
+                    </div><br>
+                    <button class="btn btn-primary btn-lg btn-block" onclick=
+                    "submitops(); datastorage();">Submit</button> 
+                    <!-- script references -->
+                     <script src=
+                    "//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> <script src="js/bootstrap.min.js"></script> 
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
