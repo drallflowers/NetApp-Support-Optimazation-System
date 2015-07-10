@@ -1,51 +1,52 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <title> Support optimazation project  </title>
-        <meta name="generator" content="Bootply" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <!--[if lt IE 9]>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta charset="utf-8">
+
+    <title>Support optimazation project</title>
+    <meta content="Bootply" name="generator">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name=
+    "viewport">
+    <link href="/css/bootstrap.min.css" rel="stylesheet"><!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <link href="/Bootstrap/css/styles.css" rel="stylesheet">
-        <link href="/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/Bootstrap/js/bootstrap.min.js" rel="stylesheet">
-    </head>
-    
-<body>
+    <link href="/Bootstrap/css/styles.css" rel="stylesheet">
+    <link href="/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Bootstrap/js/bootstrap.min.js" rel="stylesheet">
+</head>
 
-    <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+<body>
+    <div class="modal show" id="loginModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="text-center">NetApp Server Request </h1>                 
-                    <input type="text" id="request" class="form-control input-lg" placeholder="Requestor">
-                    <br>
-                 
-                     Start Date  - System will need to be operational <input type="date" id="start" class="form-control input-lg" placeholder="Start Date">
+                    <h1 class="text-center">NetApp Server
+                    Request</h1><input class="form-control input-lg" id=
+                    "request" placeholder="Requestor" type="text"><br>
+                    Start Date - System will need to be operational
+                    <input class="form-control input-lg" id="start"
+                    placeholder="Start Date" type="date"><br>
+                    End Date - System will cleared for removal from
+                    rack<input class="form-control input-lg" id="end"
+                    placeholder="End Date" type="date"><br>
+                    Description:<br>
+                    <textarea cols="45" id="descr" maxlength="32" rows="2">
+</textarea><br>
                     <br>
 
-                  
-                     End Date - System will cleared for removal from rack<input type="date" id="end" class="form-control input-lg" placeholder="End Date">
-                    <br>
-
-                     Description: <br>
-                    <textarea rows="2" cols="45" id="descr" maxlength="32"></textarea>                  
-                    <br>
-                    <br>
-                    
                     <form>
-                        <input type="number" id="host_num"  class="form-control input-lg" placeholder="Number of Hosts" min="0" max="10"> <br>
-                    </form>
-                    <form>
-                         <input type="number" id="array_num"  class="form-control input-lg" placeholder="Number of Arrays" min="0" max="10"> <br>
+                        <input class="form-control input-lg" id="host_num" max=
+                        "10" min="0" placeholder="Number of Hosts" type=
+                        "number"><br>
                     </form>
 
-                    <script>
-
+                    <form>
+                        <input class="form-control input-lg" id="array_num"
+                        max="10" min="0" placeholder="Number of Arrays" type=
+                        "number"><br>
+                    </form><script>
+    // clears input data stored
                         function clearstorage() {
                             var host = " ";
                             var array = " ";
@@ -65,7 +66,7 @@
 
                         }
 
-
+                        // stores users input data 
                         function datastorage() {
                             var host = document.getElementById("host_num").value;
                             var array = document.getElementById("array_num").value;
@@ -82,7 +83,8 @@
                             localStorage.setItem("description", description);
                          
                         }
-
+                        
+                        //checks to see if all required fields have user input    
                         function submitops() {
                             if (document.getElementById("host_num").value == "") {
                                 document.getElementById("submission").style.display = "";
@@ -110,25 +112,22 @@
                                 return;
                             }
                         }
-                      </script>
-
-                   
-                   
+                    </script>
 
                     <div id="submission" style="display:none">
-                    <h6 style="color:red"> *please fill in all fields before submiting </h6><br>
-                    </div>
-                     
-                   
-                   
-                    <button style="color:red" class="back" aria-hidden="true" onclick="clearstorage()"> Start Over </button>
-                    <br><br>
-                       
-                    <button onclick=" datastorage(); submitops();" class="btn btn-primary btn-lg btn-block">Next</button>
-
-                    
+                        <h6 style="color:red">*please fill in all fields before
+                        submiting</h6><br>
+                    </div><button class="back" onclick="clearstorage()" style=
+                    "color:red">Start Over</button><br>
+                    <br>
+                    <button class="btn btn-primary btn-lg btn-block" onclick=
+                    " datastorage(); submitops();">Next</button> 
                     <!-- script references -->
-                    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-                    <script src="js/bootstrap.min.js"></script>
+                     <script src=
+                    "//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> <script src="js/bootstrap.min.js"></script> 
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
